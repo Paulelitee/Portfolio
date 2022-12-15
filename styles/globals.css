@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+.welcomePage    {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+}
+.header {
+    transition: all 1s ease 0.1s;
+
+}
+
+.hide{
+    display: none;
+}
+
+.show  {
+    opacity: 1;
+    transition: all 1s ease;
+}
+
+
+
+
+.skills  {
+    transition: all 1s ease-in-out;
+
+}
+
+.skills:hover{
+    transform: scale(1.1);
+    transform: translateY(10);
+}
+
+.resumeButton  {
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.1);
+
+}
+
+.resumeButton:hover{
+    transform: scale(1.1);
+}
+
+.socials   {
+    transition: color 0.4s linear;
+    border: 2px solid #475569;
+    padding: 10px;
+    background: none;
+    position: relative;
+    color: #475569;
+    z-index: 10;
+
+}
+
+.socials::before{
+    content: '';
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: #6ee7b7;
+    transition: transform 0.2s;
+    position: absolute;
+    transform-origin: 0 bottom;
+    transform: scaleY(0);
+    z-index: -1;
+
+}
+
+.socials:hover{
+    color: #0f172a;
+    border: 1px;
+    border-radius: 50px;
+    font-weight: 600;
+}
+
+.socials:hover::before  {
+    transform: scaleY(1);
+}
+
+.titles {
+    transition: color 1s ease-in-out;
+    backgroun-color: red;
+}
+
+.contact {
+    justify-content: center;
+}
