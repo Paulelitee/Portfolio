@@ -43,8 +43,8 @@ export function About() {
                     />
                 </div >
                 <div>
-                <a href = {logo} target = {'_blank'} rel = 'noopenner referrer' >
-                    <Button desc = 'Get Resume' />
+                <a href = {logo.src}  rel = 'noopenner referrer' download >
+                    <Button/>
                     </a>
                 </div>
 

@@ -15,7 +15,7 @@ type SkillProps  = {
     desc: string
 }
 
-const Skill = ({desc}) => {
+const Skill = ({desc}: SkillProps) => {
     return(
         <div className = {'flex font-bold mx-5 my-1 flex-row hover:text-yellow-300 skills gap-3'}>
             <CubeIcon className = {'h-6 w-6 '}/>
@@ -26,16 +26,16 @@ const Skill = ({desc}) => {
 
 
 
-function handleClicked()  {
-    setActive(!isActive)
-    console.log(isActive)
-}
-
 
 export const Intro = () => {
     const [isActive, setActive] = useState(false)
 
 
+
+    function handleClicked()  {
+        setActive(!isActive)
+        console.log(isActive)
+    }
 
     return(
         <div className = {'flex-col justify-center items-center'}>
@@ -63,7 +63,7 @@ export const Intro = () => {
                     as such as scalability,collaboration and management. making
                     it usable and enjoyable by both customer and company.
 
-                    Below are some technologies i've been working with lately.
+                    Below are some technologies i&apos;ve been working with lately.
                 </p>
                 <div className = {'justify-center text-emerald-400 pt-5 flex\
                                  transition transition-all transition-colors flex-row flex-wrap '}>

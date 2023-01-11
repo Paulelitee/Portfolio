@@ -24,7 +24,7 @@ export function Socials()   {
 
             <div className = {'mx-10 flex mb-12 flex-row flex-wrap gap-4 justify-center md:gap-10'}>
                 {platforms.map
-                    (social => <Link href = {social.link} passHref = {true} >
+                    ((social, index) => <Link href = {social.link} passHref = {true} key = {index} >
                         <button className = {'text-slate-500 socials border border-slate-300 hover:rounded rounded px-4 py-2'}>
                     {social.name} </button></Link>
                     )

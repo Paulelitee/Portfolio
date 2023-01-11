@@ -3,12 +3,8 @@ import { motion } from 'framer-motion'
 
 
 
-type Props = {
-    desc: string
-    type: string
-}
 
-export function Button({desc, type})    {
+export function Button()    {
 
     const [isActive, setActive] = useState(false)
     const normal = 'px-5 py-4 border rounded border-emerald-300 w-36 text-emerald-300 '
@@ -41,7 +37,6 @@ export function Button({desc, type})    {
             onClick = {(e) => e.preventDefault }
             type = 'submit'>
 
-            {desc}
         </button>
     )
 }

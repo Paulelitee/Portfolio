@@ -8,20 +8,12 @@ import { ContactForm } from '../components/ContactForm'
 import { Intro } from '../components/Intro'
 import { Projects } from '../components/Projects'
 import { Socials } from '../components/Socials'
-import { Blogs } from '../components/Blogs'
 import { NavPane } from '../components/NavPane'
-import Link from 'next/Link'
+import Link from 'next/link'
 import { motion, useScroll } from 'framer-motion'
 
-fetch('https://random-data-api.com/api/users')
-.then((response) => response.json())
-.then((data) => console.log(data))
-console.log('working')
 
-
-console.log('working')
-
-export default function App({ Component, pageProps }: AppProps) {
+export  function Main() {
 
     const [isActive, setActive] = useState(true)
 
@@ -36,7 +28,6 @@ export default function App({ Component, pageProps }: AppProps) {
             <About />
             <Intro />
             <Projects />
-            <Blogs />
             <ContactForm />
             <Socials />
 

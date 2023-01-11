@@ -12,7 +12,7 @@ const menuItems = [
         'Socials'
 ]
 
-const MenuItem = ({item}) => {
+const MenuItem = ({item}: Props) => {
     return (
         <h1 className = {'hover:text-yellow-300 hover:text-3xl'}>
             {item}

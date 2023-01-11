@@ -9,7 +9,7 @@ type Props = {
 }
 
 
-const Project = ({desc}) => {
+const Project = ({desc}: Props) => {
 
 
         return(

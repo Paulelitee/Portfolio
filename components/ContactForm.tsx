@@ -10,7 +10,7 @@ export function ContactForm()   {
     const [subject, setSubject ] = useState('')
     const [message, setMessage ] = useState('')
 
-    const handleSubmit = (e) => {
+    const handleSubmit = (e: any) => {
     e.preventDefault();
     console.log('Event: Form Submit');
     console.log(name, email, subject, message)
@@ -43,13 +43,13 @@ export function ContactForm()   {
             <div className = {'flex w-full flex-col md:flex-row gap-3'}>
                 <input
                     type = 'text'
-                    onChange = {(e) => {setName(e.target.value)}}
+                    onChange = {(e: any) => {setName(e.target.value)}}
                     className = {`${classname}`}
                     placeholder = 'Name'>
                 </input>
 
                 <input
-                    onChange = {(e) => {setMessage(e.target.value)}}
+                    onChange = {(e: any) => {setMessage(e.target.value)}}
                     type = 'email'
                     className = {`${classname}`}
                     placeholder = 'Email'>
@@ -58,19 +58,19 @@ export function ContactForm()   {
 
             <input
                 type = 'text'
-                onChange = {(e) => {setSubject(e.target.value)}}
+                onChange = {(e: any) => {setSubject(e.target.value)}}
                 className = {`${classname}`}
                 placeholder = 'Subject'>
             </input>
 
             <textarea
-                onChange = {(e) => {setMessage(e.target.value)}}
+                onChange = {(e: any) => {setMessage(e.target.value)}}
                 className = {`${classname} h-32`}
                 placeholder = {'message'}>
             </textarea>
 
-            <div
-                <Button desc = 'Submit'/>
+            <div>
+                <Button />
 
             </div>
             </form>
